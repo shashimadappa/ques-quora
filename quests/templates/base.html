@@ -1,0 +1,106 @@
+
+                        <!-- thids is base  -->
+
+
+<!DOCTYPE html>   
+
+<html lang="en">
+
+<head>
+    
+
+ 
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> {% block title%} {% endblock %} </title>
+
+  <style>
+    .navbar {
+      background-color: black;
+      border-radius: 5px;
+
+
+    }
+
+    .navbar ul {
+      overflow: auto;
+    }
+
+    .navbar li {
+      float: left;
+      list-style: none;
+      margin: 10px 15px;
+      border-radius: 3px;
+
+    }
+
+    .navbar li a {
+      text-decoration: none;
+      color: white;
+      padding: 20px 20px;
+
+    }
+
+    .search {
+      float: right;
+      color: aliceblue;
+      margin: 10px 52px;
+    }
+
+    .navbar li :hover {
+      color: grey;
+    }
+
+   
+
+
+
+    
+  </style>
+</head>
+                           <!-- pages link -->
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li> <h1 style="margin: -4px 7px;color: #E3DCDC "> Ques! </h1> </li>
+        <li> <a href="/quests/home">home</a> </li>
+        <li> <a href="/quests/question">questions</a> </li>
+        <li> <a href="/quests/about">about us</a> </li>
+        <a href="/quests/login" style="color: right;margin: 11px 21px;float: right;color: white;">login</a>
+        
+        
+<!-- 
+        search button -->
+        <from class="search">     
+          
+          <input type="text" name="search" id="search" placeholder="search" ;="" style="margin: -1px -166px;">
+          <button type="submit" style="background: darkgray;padding: 8px;float: right;margin: 0px -34px;
+          color: black;"><i class="fa fa-search"></i></button>
+         
+        </from>
+
+        
+
+
+      </ul>
+
+    </nav>
+
+  
+     
+  
+  
+    
+    
+    {% block body %} {% endblock %}
+  </header>
+  
+
+  
+
+</body>
+
+</html>

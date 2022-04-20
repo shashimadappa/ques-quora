@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title%} quess_home {% endblock %}
+
+{% block body %} 
+
+<from>
+    <label for="email">email</label> <br>
+    <input type="email">
+    <br>
+    <label for="password">password</label> <br>
+    <input type="password">
+    <br>
+        <button type="submit">submit</button>
+    </form> <br>
+
+    <p>forgot password? <a href="">click here</a></p>
+    
+    
+    <p>if not registered  <a href="/quests/signup">click here</a> </p>
+
+     {% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title%} questions {% endblock %}
+{% block body %}
+                               <!-- ask question page -->
+
+<h2 style="background-color: #E3DCDC" >ask your question below!</h2>
+
+
+
+<form action="/quests/home/" method="post">
+  {% csrf_token %}
+
+  
+
+  <textarea name="content" style="height: 140px; width: 466px;  ; " placeholder="type your question..."></textarea> <br>
+  <button class="submit" type="submit">post</button>
+
+  
+</form> 
+
+
+
+
+{% endblock %}

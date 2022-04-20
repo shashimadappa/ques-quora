@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title%} ques_home {% endblock %}
+
+
+{% block body %}
+
+
+{% for que in allhome %}
+<!-- data imported using sqlite3 -->
+
+<div class="container" style="margin: 10px 10px; background-color: #E3DCDC; border-radius: 5px;">
+<br>
+    <ul>
+        <li>
+            <h2 style=> {{que.title}}</h2>
+        </li>
+        <li>
+            <p>asked by <a href=" {{ que.author }} "> {{ que.author }} </a>
+            <h6> {{que.date_posted}}</h6>
+            </p>
+        </li>
+    </ul>
+
+    <form action="/quests/home" method="POST">
+        <textarea name="" id="" cols="40" rows="3" placeholder="answer..." style="margin: -2px 23px;"></textarea>
+        <!--comment textarea -->
+        <br>
+        <button type="submit" action="" style="margin: 5px 23px;">post</button>
+        <br>
+    </form>
+
+    <h3 style="margin: 20px;">answers</h3>
+
+    <p style="margin: 0px 20px;"> {{que.content}} </p>
+
+    <div>
+        <button id="but" style="margin: 8px 21px;">up vote</button>
+        <p id="votes" style="margin: -29px 86px;font-weight:bold;font-family: system-ui;">0</p> <!-- up votes button -->
+    </div>
+    <br> <br> <br> <br>
+
+
+
+</div>
+
+
+
+
+
+
+
+{% load static %}
+<script src="{% static '/js/1.js' %}" type="text/javascript"></script>
+
+{% endfor %}
+
+{% endblock %}
